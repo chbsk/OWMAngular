@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CityFormComponent } from './city-form/city-form.component';
+import { DisplayWeaherComponent } from './city-form/display-weaher/display-weaher.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CityFormComponent
+    CityFormComponent,
+    DisplayWeaherComponent
   ],
   imports: [
     BrowserModule,

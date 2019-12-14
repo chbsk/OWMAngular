@@ -1,7 +1,7 @@
 <form>
     <div class="form-group">
         <label for="city">City</label>
-        <input id="city" type="text" class="form-control">
+        <input ngModel name="city" #city="ngModel" (change)="log(city.value)" id="city" type="text" class="form-control">
     </div>
     <button class="btn btn-primary">
         Submit

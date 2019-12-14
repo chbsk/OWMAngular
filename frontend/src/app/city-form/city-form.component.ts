@@ -12,4 +12,15 @@ export class CityFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  log(x) {
+    var pokeurl = "https://pokeapi.co/api/v2/pokemon/"+x;
+    fetch(pokeurl)
+    .then(response => response.json())
+    .then(data =>{
+      console.log(data);
+    })
+    .catch(() => {
+      console.log('Pokemon does not exist')
+    })
+  }
 }
