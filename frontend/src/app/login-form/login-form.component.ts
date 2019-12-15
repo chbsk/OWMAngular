@@ -12,4 +12,15 @@ export class LoginFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  user: '';
+  passw: '';
+
+  log(user, passw) {
+    this.user = user; 
+    this.passw = passw;
+    console.log(this.user);
+    console.log(this.passw);
+  }
+
+
 }

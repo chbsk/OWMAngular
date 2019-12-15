@@ -3,12 +3,12 @@
         {
             "id": 1,
             "user": "dula",
-            "password": "123"
+            "password": "$2b$05$q2rSH2hrChbn.3qzAdbCVe6qMSwXlTK1Dfm.hMIa1L9nijaqhZ8LC"
         },
         {
             "id": 2,
             "user": "saeed",
-            "password": "567"
+            "password": "$2b$05$rJpogxKc5abLowL3iZTyjOrTjRfsdvpbzsQT9oK9ZH19815aV087e"
         }
     ]
 }
