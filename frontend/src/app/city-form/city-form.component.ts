@@ -12,9 +12,9 @@ export class CityFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  pokem: 'ditto';
+  cityName: 'ditto';
   log(x) {
-    this.pokem = x;
-    console.log(this.pokem);
+    this.cityName = x;
+    console.log(x);
   }
 }

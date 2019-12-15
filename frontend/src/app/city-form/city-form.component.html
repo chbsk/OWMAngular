@@ -1,10 +1,10 @@
 <form>
     <div class="form-group">
         <label for="city">City</label>
-        <input ngModel name="city" #city="ngModel" (change)="log(city.value)" id="city" type="text" class="form-control">
+        <input ngModel name="city" #city="ngModel" id="city" type="text" class="form-control">
     </div>
-    <button class="btn btn-primary">
+    <button class="btn btn-primary" (click)="log(city.value)">
         Submit
     </button>
 </form>
-<app-display-weaher [pooti]="city.value"></app-display-weaher>
+<app-display-weaher [cityName]="cityName"></app-display-weaher>
