@@ -1,0 +1,15 @@
+{
+	"locData":[
+        {
+		    "id": 1,
+		    "user": "dula",
+            "cities": ["Calgary", "Dubai"]
+        },
+	    {
+		    "id": 2,
+		    "user": "saeed",
+		    "cities": ["Toronto", "Abu Dhabi"]
+        }
+    ]
+
+}

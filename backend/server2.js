@@ -5,57 +5,40 @@ const {ApolloServer, gql, AuthenticationError} = require('apollo-server-express'
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const fs = require('fs');
 //const cookieParser = require('cookie-parser')
 
 
-var schema = buildSchema('\
-	type Query {\
-		locations(user: String): Locations\
-	}\
-	\
-	type Loginfo {\
-		id: Int\
-		user: String\
-		password: String\
-	}\
-	\
-	type Locations{\
-		id: Int\
-		user: String\
-		cities: [String]\
-	}\
-');
+var schema = buildSchema(`
+	type Query {
+		locations(user: String): Locations
+	}
+	
+	type Loginfo {
+		id: Int
+		user: String
+		password: String
+	}
+	
+	type Locations{
+		id: Int
+		user: String
+		cities: [String]
+	}
+`);
 
-var loginData = [
-	{
-		id: 1,
-		user: 'dula',
-		password: '123'
-	},
-	{
-		id: 2,
-		user: 'saeed',
-		password: '567'
-	},
-];
+//Loading user login data (accessed as loginData.loginfo)
+var loginData = fs.readFileSync('loginData.json');
+var loginData = JSON.parse(loginData);
 
-var locationData = [
-	{
-		id: 1,
-		user: 'dula',
-		cities: ['Calgary, Dubai']
-	},
-	{
-		id: 2,
-		user: 'saeed',
-		cities: ['Toronto', 'Abu Dhabi']
-	},
-]
+//Loading location data for each user (accessed as locationData.locData)
+var locationData = fs.readFileSync('locationData.json');
+var locationData = JSON.parse(locationData);
 
 //Filter locationData for all instances of Locations object containing user
 const getLocations = function(args){
 	var user = args.user;
-	return locationData.filter(locations => {
+	return locationData.locData.filter(locations => {
 		return locations.user === user;
 	})[0];
 }
