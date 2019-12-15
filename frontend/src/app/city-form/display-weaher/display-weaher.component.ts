@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CityFormComponent } from '../city-form.component';
 
 @Component({
@@ -8,6 +8,7 @@ import { CityFormComponent } from '../city-form.component';
 })
 export class DisplayWeaherComponent implements OnInit {
 
+  @Input() pooti: String;
   constructor() { }
 
   ngOnInit() {
