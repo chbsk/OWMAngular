@@ -11,7 +11,7 @@ const fs = require('fs');
 
 var schema = buildSchema(`
 	type Query {
-		locations(user: String): Locations
+		locations: Locations
 	}
 	
 	type Loginfo {
@@ -38,6 +38,9 @@ var locationData = JSON.parse(locationData);
 //Filter locationData for all instances of Locations object containing user
 const getLocations = function(args){
 	var user = args.user;
+	//for testing purposes
+	var user = 'dula'
+	//for testing purposes
 	return locationData.locData.filter(locations => {
 		return locations.user === user;
 	})[0];
