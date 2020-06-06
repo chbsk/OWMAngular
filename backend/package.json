@@ -9,7 +9,7 @@
   "author": "Dula",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-express": "^2.9.13",
+    "apollo-server-express": "^2.14.2",
     "bcrypt": "^3.0.7",
     "cors": "^2.8.5",
     "express": "^4.17.1",
